@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for a single task item in the RecyclerView -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="12dp">
 
+    <!-- Checkbox to mark the task as completed -->
     <CheckBox
         android:id="@+id/cbDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <!-- Container for task title and priority -->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -17,12 +20,14 @@
         android:orientation="vertical"
         android:paddingStart="8dp">
 
+        <!-- Displays the task title -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title" />
 
+        <!-- Displays the task priority -->
         <TextView
             android:id="@+id/tvPriority"
             android:layout_width="wrap_content"

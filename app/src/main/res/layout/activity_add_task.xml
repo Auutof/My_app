@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for adding a new task -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,6 +9,7 @@
     android:padding="16dp"
     tools:context=".AddTaskActivity">
 
+    <!-- Input field where user enters the task title -->
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="0dp"
@@ -17,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- RadioGroup used to select task priority -->
     <RadioGroup
         android:id="@+id/rgPriority"
         android:layout_width="wrap_content"
@@ -25,12 +28,14 @@
         app:layout_constraintTop_toBottomOf="@id/etTitle"
         app:layout_constraintStart_toStartOf="parent">
 
+        <!-- Low priority option -->
         <RadioButton
             android:id="@+id/rbLow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Low" />
 
+        <!-- Medium priority option (selected by default) -->
         <RadioButton
             android:id="@+id/rbMedium"
             android:layout_width="wrap_content"
@@ -38,6 +43,7 @@
             android:text="Medium"
             android:checked="true" />
 
+        <!-- High priority option -->
         <RadioButton
             android:id="@+id/rbHigh"
             android:layout_width="wrap_content"
@@ -45,6 +51,7 @@
             android:text="High" />
     </RadioGroup>
 
+    <!-- Button used to save the task -->
     <Button
         android:id="@+id/btnSave"
         android:layout_width="0dp"
